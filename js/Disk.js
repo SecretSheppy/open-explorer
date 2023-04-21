@@ -18,7 +18,7 @@ class Disk {
 
             // Microsoft Windows
             case "win32":
-                // https://superuser.com/questions/896764/windows-command-line-get-disk-space-in-gb
+                // scan for windows disks
                 this.scanwin()
                     .then((result) => {
                         this.disks = result;

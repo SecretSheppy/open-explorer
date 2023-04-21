@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!--styles-->
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/icons.css" />
+
+    <!--scripts-->
+    <script src="../js/Pinned.js"></script>
+    <script src="../js/includes.js"></script>
+    <script src="../js/SystemData.js"></script>
+    <script src="../js/Explorer.js"></script>
+    <script src="../js/Gui.js"></script>
+    <script src="../js/Controls.js"></script>
+    <script src="../js/Indexer.js"></script>
+    <script src="../js/Prompt.js"></script>
+    <script src="../js/DirectoryTools.js"></script>
+    <script src="../js/UserInterface.js"></script>
+    <script src="../js/Disk.js"></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/listeners.js" defer></script>
+</head>
+<body>
+<!--context menu-->
+<div class="context" id="context-menu" style="display: none;">
+    <button>Copy</button>
+    <button>Cut</button>
+    <button>Paste</button>
+    <hr>
+    <button>Delete</button>
+    <button>Rename</button>
+    <hr>
+    <button>Open In New Window</button>
+    <button>Pin</button>
+    <button>Copy path</button>
+    <hr>
+    <button>Move to folder</button>
+    <button>Move to external drive</button>
+    <button>Move to linked PC</button>
+    <hr>
+    <button>Open with terminal</button>
+</div>
+
+<!--navbar at top of gui-->
+<div class="nav">
+    <!--tabs that appear in the top left corner-->
+    <div class="tabs">
+        <div class="tab active" id="home" onclick="controls.openTab(this.id)">Home</div>
+        <div class="tab" id="view" onclick="controls.openTab(this.id)">View</div>
+        <div class="tab" id="settings" onclick="controls.openTab(this.id)">Settings</div>
+        <div class="tab" id="host" onclick="controls.openTab(this.id)">Host</div>
+        <div class="tab" id="connect" onclick="controls.openTab(this.id)">Connect</div>
+    </div>
+
+    <!--tab content that appears as nav main content-->
+    <div class="tab-content">
+        <div id="home-tab" class="active">
+            <button title="New Folder" onclick="controls.ui.toggleNewFilePrompt()">
+                <i class="oe-new-folder oe-20hx"></i>
+                <p>New Folder</p>
+            </button>
+            <button title="Copy" onclick="controls.setClipboard();">
+                <i class="oe-copy oe-20hx"></i>
+                <p>Copy</p>
+            </button>
+            <button title="Paste" onclick="controls.pasteClipboard();">
+                <i class="oe-paste oe-20hx"></i>
+                <p>Paste</p>
+            </button>
+            <button title="Move To">
+                <i class="oe-move-to oe-20hx"></i>
+                <p>Move To</p>
+            </button>
+            <button title="Copy To">
+                <i class="oe-copy-to oe-20hx"></i>
+                <p>Copy To</p>
+            </button>
+            <button title="Delete" onclick="controls.wasteFile()">
+                <i class="oe-delete oe-20hx"></i>
+                <p>Delete</p>
+            </button>
+            <button title="Rename">
+                <i class="oe-rename oe-20hx"></i>
+                <p>Rename</p>
+            </button>
+            <button title="Properties">
+                <i class="oe-properties oe-20hx"></i>
+                <p>Properties</p>
+            </button>
+            <button title="Run Command">
+                <i class="oe-terminal oe-20hx"></i>
+                <p>Run</p>
+            </button>
+        </div>
+        <div id="view-tab">
+            <button onclick="controls.ui.showRows()">
+                <i class="oe-rows oe-20hx"></i>
+                <p>Rows</p>
+            </button>
+            <button onclick="controls.ui.showIcons()">
+                <i class="oe-icons oe-20hx"></i>
+                <p>Icons</p>
+            </button>
+        </div>
+        <div id="settings-tab">
+            <button onclick="">
+                <i class="github oe-20hx"></i>
+                <p>Github</p>
+            </button>
+            <button onclick="">
+                <i class="oe-link oe-20hx"></i>
+                <p>Documentation</p>
+            </button>
+        </div>
+        <div id="host-tab"></div>
+        <div id="connect-tab"></div>
+    </div>
+
+    <!--toolbar that appears at the bottom of the nav-->
+    <div class="toolbar">
+        <button onclick="controls.back()"><i class="oe-back oe-20hx"></i></button>
+        <button><i class="oe-forwards oe-20hx"></i></button>
+        <button><i class="oe-refresh oe-20hx"></i></button>
+        <input id="current-directory-display" placeholder="Search Directories..." />
+        <input class="searchbar" placeholder="Search Files..." id="search" />
+    </div>
+</div>
+
+<!--column of pinned directories displays on the left of the gui-->
+<div class="pinned full-row" id="pinned">
+    <!--TODO - pinned file and disk generation-->
+    <div class="file" data-directory="waste-basket" onclick="controls.openPinnedLocation(this.getAttribute('data-directory'));">
+        <i class="oe-waste-basket oe-20hx"></i>
+        <h3>Waste Basket</h3>
+    </div>
+    <div class="file" onclick="openTransferred()">
+        <i class="oe-transfer-folder oe-20hx"></i>
+        <h3>Transferred Files</h3>
+    </div>
+    <hr>
+    <div class="file">
+        <i class="oe-desktop oe-20hx"></i>
+        <h3>Desktop</h3>
+    </div>
+    <div class="file">
+        <i class="oe-downloads oe-20hx"></i>
+        <h3>Downloads</h3>
+    </div>
+    <div class="file">
+        <i class="oe-documents oe-20hx"></i>
+        <h3>Documents</h3>
+    </div>
+    <hr>
+    <div class="disk">
+        <div class="wrapper">
+            <i class="oe-floppy oe-20hx"></i>
+            <h3>Drive (primary)</h3>
+        </div>
+        <div class="storage">
+            <div class="inner" style="width: 90%"></div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+<!--
+main filesystem display, will have different display modes:
+    full-row will display each file and folder as a full row across the width
+        of the main container. This view will display more information about each
+        file (i.e. date created, owner, signature, file type etc...)
+    small, medium or large icons which will display in a grid sized based on the
+        icon size selected
+-->
+<div class="main full-row">
+    <!--prompt-->
+    <div class="prompt-wrapper" style="display: none;" id="prompt">
+        <div class="prompt-inner" id="prompt-interface">
+            <div id="prompt-new-file" style="display: none;">
+                <input placeholder="File Name..." id="new-folder-name">
+                <button onclick="controls.ui.toggleNewFilePrompt()">Cancel</button>
+                <button onclick="controls.createFile()">Create</button>
+            </div>
+            <div id="prompt-error" style="display: none;">
+            </div>
+        </div>
+    </div>
+    <div id="main-file-system-gui"></div>
+</div>
+</body>
+</html>

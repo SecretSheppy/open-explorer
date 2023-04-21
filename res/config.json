@@ -1,0 +1,29 @@
+{
+    "processing-order": [
+        "document",
+        "image",
+        "audio",
+        "video",
+        "compressed",
+        "spreadsheet",
+        "code",
+        "web",
+        "executable",
+        "layout",
+        "data",
+        "game",
+        "CAD",
+        "GIS",
+        "font",
+        "system",
+        "plugin",
+        "setting",
+        "encoded",
+        "disk-image",
+        "backup",
+        "misc",
+        "database",
+        "3d",
+        "shortcut"
+    ]
+}

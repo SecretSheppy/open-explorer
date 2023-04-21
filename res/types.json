@@ -1,0 +1,344 @@
+{
+    "image": {
+        "class": "oe-image-file",
+        "extensions": [
+            ".bmp",
+            ".dcm",
+            ".dds",
+            ".djvu",
+            ".gif",
+            ".heic",
+            ".jpg",
+            ".png",
+            ".psd",
+            ".tga",
+            ".tif",
+            ".ai",
+            ".cdr",
+            ".emf",
+            ".eps",
+            ".ps",
+            ".sketch",
+            ".svg",
+            ".vsdx"
+        ]
+    },
+    "3d": {
+        "class": "oe-3d-file",
+        "extensions": [
+            ".3dm",
+            ".3ds",
+            ".blend",
+            ".dae",
+            ".fbx",
+            ".max",
+            ".obj"
+        ]
+    },
+    "document": {
+        "class": "oe-document-file",
+        "extensions": [
+            ".doc",
+            ".docx",
+            ".eml",
+            ".log",
+            ".msg",
+            ".odt",
+            ".pages",
+            ".rtf",
+            ".tex",
+            ".txt",
+            ".wpd"
+        ]
+    },
+    "data": {
+        "class": "oe-data-file",
+        "extensions": [
+            ".aae",
+            ".csv",
+            ".dat",
+            ".key",
+            ".mpp",
+            ".obb",
+            ".ppt",
+            ".pptx",
+            ".rpt",
+            ".sdf",
+            ".tar",
+            ".vcf",
+            ".xml"
+        ]
+    },
+    "code": {
+        "class": "oe-code-file",
+        "extensions": [
+            ".appx",
+            ".c",
+            ".class",
+            ".config",
+            ".cpp",
+            ".cs",
+            ".h",
+            ".java",
+            ".kt",
+            ".lua",
+            ".m",
+            ".md",
+            ".pl",
+            ".py",
+            ".sb3",
+            ".sln",
+            ".swift",
+            ".unity",
+            ".vb",
+            ".vcxproj",
+            ".xcodeproj",
+            ".yml"
+        ]
+    },
+    "audio": {
+        "class": "oe-audio-file",
+        "extensions": [
+            ".aif",
+            ".flac",
+            ".m3u",
+            ".m4a",
+            ".mid",
+            ".mp3",
+            ".ogg",
+            ".wav",
+            ".wma"
+        ]
+    },
+    "video": {
+        "class": "oe-video-file",
+        "extensions": [
+            ".3gp",
+            ".asf",
+            ".avi",
+            ".flv",
+            ".m4v",
+            ".mov",
+            ".mp4",
+            ".mpg",
+            ".srt",
+            ".swf",
+            ".ts",
+            ".vob",
+            ".wmv"
+        ]
+    },
+    "layout": {
+        "class": "oe-layout-file",
+        "extensions": [
+            ".afpub",
+            ".indd",
+            ".oxps",
+            ".pdf",
+            ".pmd",
+            ".pub",
+            ".qxp",
+            ".xps",
+            ".song"
+        ]
+    },
+    "spreadsheet": {
+        "class": "oe-spreadsheet-file",
+        "extensions": [
+            ".numbers",
+            ".ods",
+            ".xlr",
+            ".xls",
+            ".xlsx"
+        ]
+    },
+    "database": {
+        "class": "oe-database-file",
+        "extensions": [
+            ".accdb",
+            ".crypt14",
+            ".db",
+            ".mdb",
+            ".odb",
+            ".pdb",
+            ".sql",
+            ".sqlite"
+        ]
+    },
+    "executable": {
+        "class": "oe-executable-file",
+        "extensions": [
+            ".apk",
+            ".app",
+            ".bat",
+            ".cmd",
+            ".com",
+            ".exe",
+            ".ipa",
+            ".jar",
+            ".run",
+            ".sh"
+        ]
+    },
+    "game": {
+        "class": "oe-game-file",
+        "extensions": [
+            ".dem",
+            ".gam",
+            ".gba",
+            ".nes",
+            ".pkg",
+            ".sav",
+            ".sav"
+        ]
+    },
+    "CAD": {
+        "class": "oe-cad-file",
+        "extensions": [
+            ".dgn",
+            ".dwg",
+            ".dxf",
+            ".step",
+            ".stl",
+            ".stp"
+        ]
+    },
+    "GIS": {
+        "class": "oe-gis-file",
+        "extensions": [
+            ".gpx",
+            ".kml",
+            ".kmz",
+            ".osm"
+        ]
+    },
+    "web": {
+        "class": "oe-web-file",
+        "extensions": [
+            ".asp",
+            ".aspx",
+            ".cer",
+            ".cfm",
+            ".csr",
+            ".css",
+            ".html",
+            ".js",
+            ".json",
+            ".jsp",
+            ".php",
+            ".xhtml",
+            ".htm"
+        ]
+    },
+    "plugin": {
+        "class": "oe-plugin-file",
+        "extensions": [
+            ".crx",
+            ".ecf",
+            ".plugin",
+            ".safariextz",
+            ".xpi"
+        ]
+    },
+    "font": {
+        "class": "oe-font-file",
+        "extensions": [
+            ".fnt",
+            ".otf",
+            ".ttf",
+            ".woff",
+            ".woff2"
+        ]
+    },
+    "system": {
+        "class": "oe-system-file",
+        "extensions": [
+            ".ani",
+            ".cab",
+            ".cpl",
+            ".cur",
+            ".deskthemepack",
+            ".dll",
+            ".dmp",
+            ".drv",
+            ".icns",
+            ".ico",
+            ".reg",
+            ".sys"
+        ]
+    },
+    "setting": {
+        "class": "oe-setting-file",
+        "extensions": [
+            ".cfg",
+            ".ini",
+            ".prf",
+            ".set"
+        ]
+    },
+    "encoded": {
+        "class": "oe-encoded-file",
+        "extensions": [
+            ".asc",
+            ".bin",
+            ".enc",
+            ".mim",
+            ".uue"
+        ]
+    },
+    "compressed": {
+        "class": "oe-compressed-file",
+        "extensions": [
+            ".7z",
+            ".cbr",
+            ".deb",
+            ".gz",
+            ".pak",
+            ".rar",
+            ".rpm",
+            ".tar.gz",
+            ".xapk",
+            ".zip",
+            ".zipx"
+        ]
+    },
+    "disk-image": {
+        "class": "oe-disk-image-file",
+        "extensions": [
+            ".dmg",
+            ".img",
+            ".iso",
+            ".mdf",
+            ".rom",
+            ".vcd"
+        ]
+    },
+    "backup": {
+        "class": "oe-backup-file",
+        "extensions": [
+            ".abk",
+            ".arc",
+            ".bak",
+            ".tmp"
+        ]
+    },
+    "misc": {
+        "class": "oe-misc-file",
+        "extensions": [
+            ".crdownload",
+            ".ics",
+            ".msi",
+            ".nomedia",
+            ".part",
+            ".pkpass",
+            ".torrent"
+        ]
+    },
+    "shortcut": {
+        "class": "oe-shortcut-file",
+        "extensions": [
+            ".url",
+            ".lnk"
+        ]
+    }
+}

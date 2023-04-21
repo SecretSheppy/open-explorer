@@ -1,0 +1,223 @@
+/* open explorer icons */
+.oe-back {
+    content: url("../assets/back_icon.png");
+}
+
+.oe-forwards {
+    content: url("../assets/forwards_icon.png");
+}
+
+.oe-refresh {
+    content: url("../assets/reload_icon.png");
+    filter: invert();
+}
+
+.oe-folder {
+    content: url("../assets/folder_icon.png");
+}
+
+.oe-document-file {
+    content: url("../assets/file_icon.png");
+}
+
+.oe-audio-file {
+    content: url("../assets/sound_file_icon.png");
+}
+
+.oe-video-file {
+    content: url("../assets/video_file_icon.png");
+}
+
+.oe-code-file {
+    content: url("../assets/code_file_icon.png");
+}
+
+.oe-image-file {
+    content: url("../assets/image_file_icon.png");
+}
+
+.oe-unknown-file {
+    content: url("../assets/unknown_file_icon.png");
+}
+
+.oe-3d-file {
+    content: url("../assets/3d_file_icon.png");
+}
+
+.oe-data-file {
+    content: url("../assets/data_file_icon.png");
+}
+
+.oe-layout-file {
+    content: url("../assets/layout_file_icon.png");
+}
+
+.oe-database-file {
+    content: url("../assets/database_file_icon.png");
+}
+
+.oe-executable-file {
+    content: url("../assets/executable_file_icon.png");
+}
+
+.oe-game-file {
+    content: url("../assets/game_file_icon.png");
+}
+
+.oe-cad-file {
+    content: url("../assets/cad_file_icon.png");
+}
+
+.oe-gis-file {
+    content: url("../assets/gis_file_icon.png");
+}
+
+.oe-web-file {
+    content: url("../assets/web_file_icon.png");
+}
+
+.oe-plugin-file {
+    content: url("../assets/plugin_file_icon.png");
+}
+
+.oe-font-file {
+    content: url("../assets/font_file_icon.png");
+}
+
+.oe-system-file {
+    content: url("../assets/system_file_icon.png");
+}
+
+.oe-setting-file {
+    content: url("../assets/setting_file_icon.png");
+}
+
+.oe-encoded-file {
+    content: url("../assets/encoded_file_icon.png");
+}
+
+.oe-compressed-file {
+    content: url("../assets/compressed_file_icon.png");
+}
+
+.oe-disk-image-file {
+    content: url("../assets/disk-image_file_icon.png");
+}
+
+.oe-backup-file {
+    content: url("../assets/backup_file_icon.png");
+}
+
+.oe-misc-file {
+    content: url("../assets/misc_file_icon.png");
+}
+
+.oe-waste-basket {
+    content: url("../assets/waste_basket_icon.png");
+}
+
+.oe-new-folder {
+    content: url("../assets/new_folder_icon.png");
+}
+
+.oe-shortcut-file {
+    content: url("../assets/shortcut_file_icon.png");
+}
+
+.oe-copy {
+    content: url("../assets/copy_icon.png");
+}
+
+.oe-paste {
+    content: url("../assets/paste_icon.png");
+}
+
+.oe-move-to {
+    content: url("../assets/move_to_icon.png");
+}
+
+.oe-copy-to {
+    content: url("../assets/copy_to_icon.png");
+}
+
+.oe-delete {
+    content: url("../assets/delete_icon.png");
+}
+
+.oe-rename {
+    content: url("../assets/rename_icon.png");
+}
+
+.oe-transfer-folder {
+    content: url("../assets/transfer_file_icon.png");
+}
+
+.oe-documents {
+    content: url("../assets/documents_icon.png");
+}
+
+.oe-downloads {
+    content: url("../assets/downloads_icon.png");
+}
+
+.oe-desktop {
+    content: url("../assets/desktop_icon.png");
+}
+
+.oe-properties {
+    content: url("../assets/properties_icon.png");
+}
+
+.oe-rows {
+    content: url("../assets/row_icon.png");
+}
+
+.oe-icons {
+    content: url("../assets/icons_icon.png");
+}
+
+.oe-floppy {
+    content: url("../assets/floppy_icon.png");
+}
+
+.oe-icon {
+    content: url("../assets/open_explorer_icon.png");
+}
+
+.oe-logo {
+    content: url("../assets/open_explorer_logo.png");
+}
+
+.oe-link {
+    content: url("../assets/link_icon.png");
+}
+
+.oe-terminal {
+    content: url("../assets/terminal_icon.png");
+}
+
+/* external icons */
+.github {
+    content: url("../assets/github-mark.png");
+}
+
+/* open explorer icon sizing */
+.oe-20hx {
+    height: 20px;
+}
+
+.oe-40hx {
+    height: 40px;
+}
+
+.oe-60hx {
+    height: 60px;
+}
+
+.oe-80hx {
+    height: 80px;
+}
+
+.oe-100hx {
+    height: 100px;
+}

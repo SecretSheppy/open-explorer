@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/icons.css" />
+    <style>
+        body {
+            width: 800px;
+            margin: 0 auto;
+            background-color: #2d2d2d;
+        }
+
+        h1, h2, h3, p {
+             font-family: 'Noto Sans', sans-serif;
+             color: #fff;
+         }
+
+        .header, .footer {
+            display: flex;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 0 0 20px 20px;
+            align-items: center;
+            gap: 20px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .footer {
+            border-radius: 20px 20px 0 0;
+        }
+
+        .footer p {
+            color: #000;
+        }
+
+        .footer > div {
+            line-height: 5px;
+        }
+
+        .header > h1 {
+            color: #ffa1a1;
+        }
+
+        hr {
+            border: none;
+            border-bottom: solid 2px #fff;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            color: #fff;
+        }
+
+        img:not(#logo) {
+            width: 100%;
+        }
+
+        key {
+            padding: 10px;
+            background-color: #afafaf;
+            color: #2d2d2d;
+            font-weight: bold;
+            font-family: 'Noto Sans', sans-serif;
+            border-radius: 5px;
+        }
+
+        .key-binding {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            color: #fff;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600&family=Raleway:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <i class="oe-icon oe-100hx"></i>
+    <h1>OpenExplorer</h1>
+</div>
+<h1>Overview</h1>
+<p>
+    OpenExplorer is an open source and cross-platform file manager built in node.js around the nw.js framework.
+    It was built for a project I was working on at the time that required more integration with a file manager
+    than was available through the default system file managers. Since its inception OpenExplorer has evolved into
+    a capable file manager, providing functionality for copying, moving, creating and deleting files within the system,
+    viewing file metadata and limited disk management.
+    <br><br>
+    One of the more recent features of OpenExplorer is its networking capabilities. If OpenExplorer is installed on two
+    devices (they do not have to be the same platform) files can be transferred between the devices with a single click.
+</p>
+<hr>
+<h1>The Interface</h1>
+<img src="interface_screenshot.png">
+<h2>Navbar</h2>
+<img src="navbar_screenshot.png">
+<p>The navbar is split into 5 tabs.</p>
+<h2>Pinned files bar</h2>
+<h2>File system display</h2>
+<img src="rows_screenshot.png">
+<p>By default OpenExplorer will show files in a row format (as seen above).</p>
+<img src="icons_screenshot.png">
+<h2>Prompts</h2>
+<img src="prompt_screenshot.png">
+<p>
+    Prompts will appear in the top right hand corner of the file system display. Prompts are used for a variety of features.
+    The above image shows the New File prompt, which allows the user to enter the file name and then press the create button.
+</p>
+<img src="prompt_error_screenshot.png">
+<p>
+    Red prompts with white text (as seen above) will appear when an error occurs. These prompts will automatically hide themselves
+    after a set amount of time (by default 3s).
+</p>
+<h2>Key bindings</h2>
+<div class="key-binding">
+    <div>
+        <key>\</key>
+    </div>
+    <p>Jump to search (works provided you're not typing into the current directory display)</p>
+</div>
+<div class="key-binding">
+    <div>
+        <key>Esc</key>
+    </div>
+    <p>Closes the currently open prompt</p>
+</div>
+<div class="key-binding">
+    <div>
+        <key>Enter</key>
+    </div>
+    <p>Submits the data in the currently open prompt</p>
+</div>
+<div class="key-binding">
+    <div>
+        <key>Ctrl</key> + <key>d</key>
+    </div>
+    <p>Jump to current directory display</p>
+</div>
+<div class="key-binding">
+    <div>
+        <key>Ctrl</key> + <key>c</key>
+    </div>
+    <p>Copy currently selected file to clipboard</p>
+</div>
+<div class="key-binding">
+    <div>
+        <key>Ctrl</key> + <key>v</key>
+    </div>
+    <p>Paste file from clipboard (if available)</p>
+</div>
+<div class="key-binding">
+    <div>
+        <key>Ctrl</key> + <key>z</key>
+    </div>
+    <p>Undo last action (i.e. paste, delete, move etc...)</p>
+</div>
+<div class="key-binding">
+    <div>
+        <key>Ctrl</key> + <key>n</key>
+    </div>
+    <p>Create new folder</p>
+</div>
+<div class="key-binding">
+    <div>
+        <key>Ctrl</key> + <key>t</key>
+    </div>
+    <p>Open in terminal</p>
+</div>
+<div class="key-binding">
+    <div>
+        <key>Ctrl</key> + <key>r</key>
+    </div>
+    <p>Run command</p>
+</div>
+<div class="key-binding">
+    <div>
+        <key>Ctrl</key> + <key>Shift</key> + <key>n</key>
+    </div>
+    <p>Open new window</p>
+</div>
+<hr>
+<h1>Disk Management</h1>
+<hr>
+<h1>Adding Custom File Icons</h1>
+<p>Adding custom file icons requires you to add custom records to "res/custom-files.json".</p>
+<hr>
+<h1>Networking</h1>
+<hr>
+<h1>Compatibility</h1>
+<ul>
+    <li><p>Windows 10 / Windows 11</p></li>
+    <p>Full feature set available now.</p>
+    <li><p>Linux (tested for Ubuntu and Arch distros)</p></li>
+    <p>
+        Linux versions have limited feature set due to development taking place in a Windows environment.
+        Users can expect the latest features about 1-2 months after Windows release.
+    </p>
+    <li><p>MacOS</p></li>
+    <p>
+        MacOS is supported however is currently untested and available with limited feature set. Users can
+        expect the latest features about 1-2 months after Linux release.
+    </p>
+</ul>
+<hr>
+<h1>Roadmap</h1>
+<ul>
+    <li><p>Dark Mode (current most requested feature)</p></li>
+    <li><p>Drag and drop functionality</p></li>
+    <li><p>Dual directory view</p></li>
+    <li><p>Multi-select functionality</p></li>
+    <li><p>Improved terminal support</p></li>
+    <li><p>File preview images</p></li>
+    <li><p>File system indexing</p></li>
+    <li><p>Node.js API for direct integration into node applications</p></li>
+    <li><p>Support for plugins</p></li>
+    <li><p>Improved LAN capabilities</p></li>
+    <ul>
+        <li><p>Password protected devices</p></li>
+        <li><p>Automatic scanning for online devices</p></li>
+    </ul>
+    <li><p>WAN capabilities</p></li>
+    <ul>
+        <li><p>Secure file transfer over a WAN</p></li>
+    </ul>
+    <li><p>File type transcoding</p></li>
+    <li><p>Real time drive scanning</p></li>
+</ul>
+<br>
+<div class="footer">
+    <img src="https://resources.secretsheppy.com/images/root/logo.webp" style="height: 100px; border-radius: 100px;" id="logo">
+    <div>
+        <p>OpenExplorer available under MIT license</p>
+        <p>Copyright (c) 2023 SecretSheppy</p>
+    </div>
+</div>
+</body>
+</html>

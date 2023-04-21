@@ -1,0 +1,278 @@
+/* global colors */
+:root {
+    --sys-primary-color: #ffbab4;
+    --sys-secondary-color: #ff4444;
+}
+
+/* global config */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+input,
+button,
+select {
+    padding: 10px;
+    border-radius: 100px;
+    outline: none;
+    background-color: #fff;
+    transition: box-shadow 0.2s;
+    font-size: 15px;
+    border: solid 2px #fff;
+}
+
+input {
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: solid 2px transparent;
+}
+
+button:hover {
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+input:focus,
+button:active,
+select:active {
+    border: solid 2px var(--sys-secondary-color);
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+            "nav nav"
+            "pinned main";
+    grid-template-rows: 130px calc(100vh - 130px);
+    grid-template-columns: 300px calc(100vw - 300px);
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* nav styling */
+.nav {
+    grid-area: nav;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 40px calc(100% - 90px) 46px;
+    background-color: #f8f8f8;
+    width: 100%;
+}
+
+.nav > .tabs {
+    display: flex;
+    padding: 5px;
+    gap: 5px;
+}
+
+.nav > .tabs > .tab {
+    padding: 0 20px 0 20px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    border-radius: 10px;
+    min-width: 50px;
+}
+
+.nav > .tabs > .tab:not(.active):hover {
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+}
+
+.nav > .tabs > .active {
+    background-color: var(--sys-primary-color);
+    color: #fff;
+}
+
+.nav > .tab-content {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+.nav > .tab-content > div {
+    display: none;
+}
+
+.nav > .tab-content > .active {
+    display: flex;
+    gap: 5px;
+}
+
+.nav > .tab-content > div button {
+    gap: 7px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.nav > .toolbar {
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    gap: 5px;
+}
+
+.nav > .toolbar > button {
+    aspect-ratio: 1/1;
+    height: auto;
+}
+
+.nav > .toolbar > #current-directory-display {
+    width: calc(100% - 400px);
+    box-sizing: border-box;
+}
+
+.nav > .toolbar > #search {
+    width: calc(400px - 110px);
+    box-sizing: border-box;
+}
+
+/* prompt styling */
+.prompt-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.prompt-wrapper .prompt-inner {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 100px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    position: relative;
+    pointer-events: all;
+}
+
+.prompt-wrapper .prompt-inner > div {
+    display: flex;
+    gap: 10px;
+}
+
+.prompt-wrapper .error {
+    background-color: #e30000;
+    color: #fff !important;
+}
+
+
+/*
+ ----------------------------------------------------------------------------------------------
+ old styling
+ ----------------------------------------------------------------------------------------------
+ */
+
+
+
+/* pinned styling */
+.pinned {
+    grid-area: pinned;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 10px;
+    user-select: none;
+}
+
+.pinned > hr {
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* main style */
+.main {
+    grid-area: main;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+/* full-row styling */
+.full-row {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.full-row .file,
+.full-row .disk > .wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3px;
+    font-size: 12px;
+    border-radius: 5px;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.full-row .file:hover,
+.full-row .disk:hover {
+    background-color: var(--sys-primary-color);
+}
+
+.full-row .disk > .storage {
+    height: 5px;
+    width: 100%;
+    background-color: #eeeeee;
+    content: " ";
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.full-row .disk > .storage > .inner {
+    background-color: var(--sys-secondary-color);
+    height: 100%;
+    width: 0;
+}
+
+/* icon styling */
+.icons {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 150px));
+    grid-auto-rows: 100px;
+}
+
+.icons .file {
+    max-width: 150px;
+    border-radius: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    height: 100px;
+}
+
+.icons .file > h3 {
+    text-overflow: ellipsis;
+    width: 90%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.icons .file:hover {
+    background-color: var(--sys-primary-color);
+}
+
+.icons .oe-20hx {
+    height: 50px;
+    margin: 0 auto;
+}

@@ -1,5 +1,7 @@
 # OpenExplorer - Version 1.0.0
 
+![OpenExplorer UI](docs/interface_screenshot.png)
+
 ## OpenExplorer
 
 OpenExplorer is a cross-platform file manager built with node.js using the nw.js framework.
